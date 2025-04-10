@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Aim Trainer</h1>
+
+    <div class="controls">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+            <option value="insane">Insane</option>
+        </select>
+        <button id="start-button">Start Game (60s)</button>
+    </div>
+
+    <div id="game-container">
+        <canvas id="three-canvas"></canvas>
+
+        <div id="ui-overlay">
+             <div id="game-area">
+                </div>
+             <div id="crosshair">+</div>
+        </div>
+
+         <div id="hud">
+             <span>Time: <span id="timer">60</span>s</span>
+             <span>Score: <span id="score">0</span></span>
+             <span>Misses: <span id="misses">0</span></span>
+             <span>Accuracy: <span id="accuracy">100.0</span>%</span>
+         </div>
+    </div>
+
+
+    <div id="results" class="hidden">
+        <button id="close-results-button" class="close-button">&times;</button>
+
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <p>Total Misses: <span id="final-misses">0</span></p>
+        <p>Final Accuracy: <span id="final-accuracy">0.0</span>%</p>
+        <div id="advice">
+            <h3>Improvement Tips:</h3>
+            <p id="advice-text"></p>
+        </div>
+        <button id="restart-button">Play Again</button>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
