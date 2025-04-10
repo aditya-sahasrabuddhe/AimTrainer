@@ -2,7 +2,7 @@
 
 A lightweight, web-based aim training tool designed to help gamers warm up and improve their reflexes before jumping into FPS matches. Built with **Three.js** and WebGL for immersive 3D graphics and responsive gameplay mechanics.
 
-![Screenshot](screenshot.png)
+![Screenshot](images/screenshot.png)
 
 ---
 
